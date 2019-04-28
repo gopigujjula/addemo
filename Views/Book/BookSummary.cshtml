@@ -1,0 +1,47 @@
+﻿@using Sitecore.Mvc;
+@using Sitecore.Mvc.Presentation
+@using Glass.Mapper.Sc.Web.Mvc
+@model addemo.Models.Book
+
+@{
+    if (Model == null)
+    {
+        return;
+    }
+}
+<section class="section-padding wow fadeInUp delay-05s" id="contact">
+    <div class="container">
+        <div class="row white">
+            <div class="col-md-8 col-sm-12">
+                <div class="section-title">
+                    <h2 class="head-title black">
+                        @Html.Glass().Editable(Model, x => x.Title)
+                    </h2>
+                    <hr class="botm-line">
+                    <p class="sec-para black">                        
+                        @Html.Glass().Editable(Model, x => x.Teaser)                        
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12">
+                <div class="col-md-4 col-sm-6">
+                    <h3 class="cont-title">Visit Us</h3>
+                    <div class="location-info">
+                        <p class="white">
+                            <span aria-hidden="true" class="fa"></span>
+                           ISBN: @Html.Glass().Editable(Model, x => x.ISBN)
+                        </p>
+                        <p class="white">
+                            <span aria-hidden="true" class="fa"></span>
+                           Language: @Html.Glass().Editable(Model, x => x.LanguageName)
+                        </p>
+                        <p class="white">
+                            <span aria-hidden="true" class="fa"></span>
+                           Author: @Html.Glass().Editable(Model, x => x.Author)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+﻿@using Sitecore.Mvc
+
+<!doctype html>
+<html>
+<head>
+    <title>Sitecore Adapty Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <div>
+        @Html.Sitecore().Placeholder("top")
+        @Html.Sitecore().Placeholder("main")
+        @Html.Sitecore().Placeholder("bottom")
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

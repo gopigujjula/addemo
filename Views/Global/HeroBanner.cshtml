@@ -1,0 +1,26 @@
+﻿@using Sitecore.Mvc;
+@using Sitecore.Mvc.Presentation
+@using Glass.Mapper.Sc.Web.Mvc
+@model addemo.Models.HeroBanner
+
+@if (Model != null)
+{
+    <header class="main-header" id="header" style="background-image:url('@Model.BackgroundImage.Src')">
+        <div class="bg-color">
+            <div class="container text-center">
+                <div class="wrapper wow fadeInUp delay-05s">
+                    <h2 class="top-title">
+                        @Html.Glass().Editable(Model, x => x.TopTitle)
+                    </h2>
+                    <h3 class="title">
+                        @Html.Glass().Editable(Model, x => x.Title)
+                    </h3>
+                    <h4 class="sub-title">
+                        @Html.Glass().Editable(Model, x => x.SubTitle)
+                    </h4>
+                    @Html.Glass().Editable(Model, x => x.CallToActionLink)
+                </div>
+            </div>
+        </div>
+    </header>
+}

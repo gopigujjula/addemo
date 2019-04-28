@@ -1,0 +1,28 @@
+﻿@using Sitecore.Mvc;
+@using Sitecore.Mvc.Presentation
+@model List<addemo.Models.Book>
+
+@{ 
+    var pageSize = RenderingContext.Current.Rendering.Parameters["Page Size"];
+}
+Page Size: @pageSize
+
+@if (Model != null && Model.Count > 0)
+{
+    foreach (var book in Model)
+    {
+    <div class="group">
+        <div class="group-header">
+            @book.Title
+        </div>
+
+        <div class="group-item">
+            <span>@book.Teaser</span>
+            <span>@book.Author</span>
+        </div>
+        <a href="@book.Url">
+            Explore Here
+        </a>
+    </div>
+    }
+}
